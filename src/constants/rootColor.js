@@ -1,0 +1,18 @@
+export const rootColors = {
+  green: 'rgb(59, 134, 59)',
+  orange: 'orangered',
+  shadowBox: 'rgb(89, 104, 121)',
+  darkFont: 'rgb(81, 92, 105)',
+  lightFont: 'rgb(129, 143, 162)',
+  light: 'rgb(249, 251, 252)',
+  white: 'white',
+  black: 'black',
+  userStatsBackground: 'rgb(168, 183, 204)',
+  userStatsBorder: 'rgb(148, 161, 180)',
+  avatarBackground: 'wheat;',
+  lightBlue: 'lightblue',
+  tableHead: 'rgb(185, 236, 219)',
+  tableDark: 'rgb(196, 210, 231)',
+  tableLight: 'rgb(219, 236, 248)',
+  tableBorder: 'rgb(81, 92, 105)',
+};
