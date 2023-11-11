@@ -7,13 +7,13 @@ export const FieldStyled = styled(Field)`
   padding: 5px 20px;
   border-radius: 2px;
   height: 40px;
-  background-color: lightgoldenrodyellow;
+  background-color: ${({ theme }) => theme.rootColors.lightPartsColor};
   border: none;
   outline: none;
   margin: 0 auto;
 
   font-size: 16px;
-  color: rgb(114, 76, 9);
+  color: ${({ theme }) => theme.rootColors.darkFont};
 
   @media (max-width: 768px) {
     width: 80%;

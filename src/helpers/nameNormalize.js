@@ -5,5 +5,5 @@ export default function normalizeName(value) {
       value.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())
     );
 
-  return splited.join(' ');
+  return splited.join(' ').trim();
 }

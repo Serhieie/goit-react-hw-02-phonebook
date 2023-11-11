@@ -1,16 +1,15 @@
 import React, { useState, useRef } from 'react';
 import {
   TableRow,
-  Button,
   TableCell,
-  ModalButton,
+  Button,
   ModalBtnContainer,
-  ModalButtonDelete,
   H2,
 } from './ContactTableItem.styled';
 import normalizePhoneNumber from '../../helpers/numberNormalize';
 import { AiOutlineUserDelete } from 'react-icons/ai';
 import Modal from 'react-modal';
+import { settings } from 'constants/deleteModalSettings';
 
 Modal.setAppElement('#root');
 
@@ -46,41 +45,15 @@ export default function ContactTableItem({ contact, index, onDeleteContact }) {
           )}
         </Button>
         <Modal
-          style={{
-            overlay: {
-              position: 'fixed',
-              zIndex: 999,
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: 'rgba(250, 250, 210, 0.5)',
-            },
-            content: {
-              position: 'absolute',
-              top: '40%',
-              left: '50%',
-              right: 'auto',
-              bottom: 'auto',
-              marginRight: '-50%',
-              transform: 'translate(-50%, -50%)',
-              border: '1px solid #ccc',
-              background: 'rgb(245, 187, 86)',
-              overflow: 'auto',
-              WebkitOverflowScrolling: 'touch',
-              borderRadius: '4px',
-              outline: 'none',
-              padding: windowWidth > 768 ? '60px 40px' : '20px 10px',
-            },
-          }}
+          style={settings}
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Delete Confirmation"
         >
           <H2 ref={subtitle}>Delete contact {contact.name}?</H2>
           <ModalBtnContainer>
-            <ModalButtonDelete onClick={handleDelete}>Delete</ModalButtonDelete>
-            <ModalButton onClick={closeModal}>Cancel</ModalButton>
+            <button onClick={handleDelete}>Delete</button>
+            <button onClick={closeModal}>Cancel</button>
           </ModalBtnContainer>
         </Modal>
       </TableCell>

@@ -1,18 +1,26 @@
 export const rootColors = {
-  green: 'rgb(59, 134, 59)',
-  orange: 'orangered',
-  shadowBox: 'rgb(89, 104, 121)',
-  darkFont: 'rgb(81, 92, 105)',
-  lightFont: 'rgb(129, 143, 162)',
-  light: 'rgb(249, 251, 252)',
-  white: 'white',
-  black: 'black',
-  userStatsBackground: 'rgb(168, 183, 204)',
-  userStatsBorder: 'rgb(148, 161, 180)',
-  avatarBackground: 'wheat;',
-  lightBlue: 'lightblue',
-  tableHead: 'rgb(185, 236, 219)',
-  tableDark: 'rgb(196, 210, 231)',
-  tableLight: 'rgb(219, 236, 248)',
-  tableBorder: 'rgb(81, 92, 105)',
+  shadowBox: 'rgb(173, 124, 39)',
+  lightPartsColor: 'lightgoldenrodyellow',
+  darkFont: 'rgb(114, 76, 9)',
+
+  gradientColor1: 'wheat',
+  gradientColor2: 'rgb(245, 187, 86)',
+  smallWraperGradient1: 'rgb(241, 226, 199)',
+  smallWraperGradient2: 'rgb(245, 209, 147)',
+
+  buttonColor: 'rgb(215, 159, 63)',
+  buttonHoverColor: 'rgb(190, 142, 60)',
+  buttonShadowBox: 'rgb(121, 85, 23)',
+  buttonTextColor: 'lightgoldenrodyellow',
+
+  errorMsg: 'orangered',
+  deleteBtnColor: 'rgba(140, 3, 3, 0.4)',
+  deleteBtnHoverColor: 'rgba(140, 3, 3, 0.85)',
+
+  tableHeaderBackground: 'rgb(245, 209, 147)',
+  tableBorderColor: 'rgb(245, 209, 147)',
+
+  filterLabelColor: 'rgb(245, 187, 86)',
+  filterPlaceholderColor: 'darkred',
+  filterTextColor: 'rgb(114, 76, 9)',
 };

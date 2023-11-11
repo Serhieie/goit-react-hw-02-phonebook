@@ -3,8 +3,8 @@ export const TodoFilterInput = styled.input`
   display: flex;
   font-size: 18px;
   font-weight: 500;
-  background-color: lightgoldenrodyellow;
-  color: rgb(114, 76, 9);
+  background-color: ${({ theme }) => theme.rootColors.lightPartsColor};
+  color: ${({ theme }) => theme.rootColors.darkFont};
   border: none;
   outline: none;
   width: 95%;
@@ -14,19 +14,22 @@ export const TodoFilterInput = styled.input`
   margin: 0 auto;
   opacity: 0.7;
   text-align: center;
+  padding: 2px 10px 2px 65px;
 
   ::placeholder {
     text-align: center;
-    color: darkred;
+    color: ${({ theme }) => theme.rootColors.filterPlaceholderColor};
     padding: 5px 20px;
   }
   @media (max-width: 768px) {
     width: 90%;
     font-size: 14px;
+    padding-left: 60px;
   }
 `;
+
 export const Label = styled.label`
-  background-color: rgb(245, 187, 86);
+  background-color: ${({ theme }) => theme.rootColors.lightPartsColor};
   width: 58%;
   margin: 0 auto;
   margin-bottom: 10px;

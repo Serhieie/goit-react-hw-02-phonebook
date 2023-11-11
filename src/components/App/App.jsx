@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { AppWrapper } from './App.styled';
+import { AppWrapper, ContactListDiv, Icon } from './App.styled';
 import ContactForm from 'components/ContactForm';
 import ContactTable from 'components/ContactTable';
+import Filter from 'components/Filter';
 import { nanoid } from 'nanoid';
 import normalizePhoneNumber from '../../helpers/numberNormalize';
 
@@ -54,12 +55,14 @@ export default class App extends Component {
           contacts={this.state.contacts}
           onSubmit={this.addContact}
         />
-        <ContactTable
-          filter={filter}
-          onChangeFilter={this.changeFilter}
-          getVisibleContacts={visibleContacts}
-          onDeleteContact={this.deleteContact}
-        />
+        <ContactListDiv>
+          <Icon />
+          <Filter forFilter={filter} onChange={this.changeFilter} />
+          <ContactTable
+            getVisibleContacts={visibleContacts}
+            onDeleteContact={this.deleteContact}
+          />
+        </ContactListDiv>
       </AppWrapper>
     );
   }

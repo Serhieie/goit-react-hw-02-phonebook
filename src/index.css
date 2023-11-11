@@ -8,9 +8,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: lightgoldenrodyellow;
-  color: rgb(145, 186, 145);
-  color: rgba(140, 3, 3, 0.4);
-  box-sizing: border-box;
 }
 
 code {

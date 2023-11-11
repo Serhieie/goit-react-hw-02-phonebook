@@ -16,8 +16,8 @@ export const FormStyled = styled(Form)`
   -webkit-user-select: none;
   background-image: linear-gradient(
     45deg,
-    rgb(241, 226, 199),
-    rgb(245, 209, 147)
+    ${({ theme }) => theme.rootColors.smallWraperGradient1},
+    ${({ theme }) => theme.rootColors.smallWraperGradient2}
   );
 
   @media (max-width: 768px) {
@@ -32,13 +32,13 @@ export const ButtonStyled = styled.button`
   width: 160px;
   height: 45px;
   border-radius: 2px;
-  background-color: rgb(215, 159, 63);
+  background-color: ${({ theme }) => theme.rootColors.buttonColor};
   border: none;
   outline: none;
   margin: 0 auto;
   margin-top: 20px;
   cursor: pointer;
-  box-shadow: 1px 1px 5px rgb(121, 85, 23);
+  box-shadow: 1px 1px 5px ${({ theme }) => theme.rootColors.shadowBox};
 
   display: flex;
   align-items: center;
@@ -47,11 +47,10 @@ export const ButtonStyled = styled.button`
   transition: all 300ms ease-in-out;
 
   font-size: 18px;
-  color: lightgoldenrodyellow;
+  color: ${({ theme }) => theme.rootColors.buttonTextColor};
 
   :hover {
-    background-color: rgb(190, 142, 60);
-    color: rgb(252, 252, 245);
+    background-color: ${({ theme }) => theme.rootColors.buttonHoverColor};
   }
 
   @media (max-width: 768px) {
@@ -78,7 +77,7 @@ export const H1 = styled.h1`
 
 export const ErrMsg = styled(ErrorMessage)`
   font-size: 20px;
-  color: orangered;
+  color: ${({ theme }) => theme.rootColors.errMsg};
   margin: 0;
   padding: 0;
   text-align: center;
