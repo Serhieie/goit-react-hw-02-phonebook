@@ -9,7 +9,7 @@ export const FormStyled = styled(Form)`
   width: 30%;
   padding: 80px 30px 20px;
   border-radius: 2px;
-  box-shadow: 1px 1px 10px rgb(173, 124, 39);
+  box-shadow: 1px 1px 10px ${({ theme }) => theme.rootColors.shadowBox};
   min-height: 562px;
   user-select: none;
   -moz-user-select: none;

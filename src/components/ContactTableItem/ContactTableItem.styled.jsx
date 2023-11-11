@@ -18,7 +18,7 @@ export const Button = styled.button`
 `;
 
 export const TableRow = styled.tr`
-  border-bottom: 2px solid rgb(245, 209, 147);
+  border-bottom: 2px solid ${({ theme }) => theme.rootColors.tableBorderColor};
   width: 100%;
 `;
 
