@@ -77,7 +77,7 @@ export const H1 = styled.h1`
 
 export const ErrMsg = styled(ErrorMessage)`
   font-size: 20px;
-  color: ${({ theme }) => theme.rootColors.errMsg};
+  color: ${({ theme }) => theme.rootColors.errorMsg};
   margin: 0;
   padding: 0;
   text-align: center;
