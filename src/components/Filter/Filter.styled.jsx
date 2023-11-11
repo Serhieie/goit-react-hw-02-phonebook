@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 export const TodoFilterInput = styled.input`
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   background-color: ${({ theme }) => theme.rootColors.lightPartsColor};
   color: ${({ theme }) => theme.rootColors.darkFont};
@@ -14,7 +14,7 @@ export const TodoFilterInput = styled.input`
   margin: 0 auto;
   opacity: 0.7;
   text-align: center;
-  padding: 2px 10px 2px 65px;
+  padding: 2px 10px 2px 30px;
 
   ::placeholder {
     text-align: center;
@@ -24,12 +24,12 @@ export const TodoFilterInput = styled.input`
   @media (max-width: 768px) {
     width: 90%;
     font-size: 14px;
-    padding-left: 60px;
+    padding-left: 30px;
   }
 `;
 
 export const Label = styled.label`
-  background-color: ${({ theme }) => theme.rootColors.lightPartsColor};
+  background-color: ${({ theme }) => theme.rootColors.filterLabelColor};
   width: 58%;
   margin: 0 auto;
   margin-bottom: 10px;
