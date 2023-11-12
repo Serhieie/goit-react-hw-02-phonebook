@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppWrapper, ContactListDiv, Icon } from './App.styled';
+import { TbUserSearch } from 'react-icons/tb';
 import ContactForm from 'components/ContactForm';
 import ContactTable from 'components/ContactTable';
 import Filter from 'components/Filter';
@@ -50,20 +50,37 @@ export default class App extends Component {
     const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
     return (
-      <AppWrapper>
+      <div
+        className="
+      flex gap-4 justify-around mx-auto w-9/12 mt-10 p-8
+      rounded shadow-xl shadow-shadowBox md:flex-col
+      md:items-center md:text-base md:py-6 md:px-1.5 md:w-11/12
+      text-xl text-darkFont min-h-562 select-none 
+      bg-gradient-to-tr from-gradientColor1 to-gradientColor2"
+      >
         <ContactForm
           contacts={this.state.contacts}
           onSubmit={this.addContact}
         />
-        <ContactListDiv>
-          <Icon />
+        <div
+          className="w-8/12 flex justify-center items-center 
+        flex-col px-5 pr-4 rounded-sm shadow-lg shadow-shadowBox
+        min-h-562 select-none bg-gradient-to-tr from-smallWraperGradient1
+        to-smallWraperGradient2 relative md:mt-5 md:py-7 md:px-5
+        md:w-11/12"
+        >
+          <TbUserSearch
+            className="absolute  w-4 h-4 top-9 left-1/3
+          opacity-40 z-10 text-filterPlaceholderColor md:w-5 md:h-5 
+          md:top-16 md:left-1/4 md2:max-w-sm md2:top-9 md2:left-1/5 ssm:hidden"
+          />
           <Filter forFilter={filter} onChange={this.changeFilter} />
           <ContactTable
             getVisibleContacts={visibleContacts}
             onDeleteContact={this.deleteContact}
           />
-        </ContactListDiv>
-      </AppWrapper>
+        </div>
+      </div>
     );
   }
 }
